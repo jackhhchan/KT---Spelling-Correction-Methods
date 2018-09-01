@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{bf86f47c-7b82-41df-8f25-3d9bd2991125}</ProjectGuid>
     <ProjectHome />
-    <StartupFile>ApproximateStringMatch.py</StartupFile>
+    <StartupFile>utils.py</StartupFile>
     <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
@@ -19,7 +19,7 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ApproximateStringMatch.py" />
+    <Compile Include="utils.py" />
     <Compile Include="spellCheck.py" />
   </ItemGroup>
   <ItemGroup>

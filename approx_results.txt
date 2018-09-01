@@ -1,0 +1,6 @@
+[LEVENSHTEIN-LIMIT]
+Limit = 1Datasets: WIKI
+
+Precision = 28.922908693275012, Recall = 71.27779025376151
+
+

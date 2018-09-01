@@ -1,9 +1,0 @@
-[Wed Aug 29 20:52:46 2018]
-
-Soundex results:
-Dataset used: data\wiki_misspell.txt, data\wiki_correct.txt 
-Number of misspell words processed: 4453
-
-Precision: 0.036702751342949855, Recall: 0.6045362676847069
-
-

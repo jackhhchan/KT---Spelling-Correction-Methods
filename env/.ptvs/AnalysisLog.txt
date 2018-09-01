@@ -1,0 +1,84 @@
+﻿
+2018-09-01T17:18:09: Start analysis
+2018-09-01T17:18:10: [ERROR] Analysis failed
+System.InvalidOperationException: Cannot obtain search paths ---> System.IO.FileNotFoundException: Could not launch process
+   at Microsoft.PythonTools.Analysis.Infrastructure.ProcessHelper..ctor(String filename, IEnumerable`1 arguments, String workingDir)
+   at Microsoft.PythonTools.Analysis.PythonLibraryPath.<GetUncachedDatabaseSearchPathsAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Prepare>d__46.MoveNext()
+   --- End of inner exception stack trace ---
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Prepare>d__46.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<RunWorker>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Run>d__33.MoveNext()
+
+2018-09-01T20:57:19: Start analysis
+2018-09-01T20:57:19: [ERROR] Analysis failed
+System.InvalidOperationException: Cannot obtain search paths ---> System.IO.FileNotFoundException: Could not launch process
+   at Microsoft.PythonTools.Analysis.Infrastructure.ProcessHelper..ctor(String filename, IEnumerable`1 arguments, String workingDir)
+   at Microsoft.PythonTools.Analysis.PythonLibraryPath.<GetUncachedDatabaseSearchPathsAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Prepare>d__46.MoveNext()
+   --- End of inner exception stack trace ---
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Prepare>d__46.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<RunWorker>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Run>d__33.MoveNext()
+
+2018-09-01T20:57:25: Start analysis
+2018-09-01T20:57:25: [ERROR] Analysis failed
+System.InvalidOperationException: Cannot obtain search paths ---> System.IO.FileNotFoundException: Could not launch process
+   at Microsoft.PythonTools.Analysis.Infrastructure.ProcessHelper..ctor(String filename, IEnumerable`1 arguments, String workingDir)
+   at Microsoft.PythonTools.Analysis.PythonLibraryPath.<GetUncachedDatabaseSearchPathsAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Prepare>d__46.MoveNext()
+   --- End of inner exception stack trace ---
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Prepare>d__46.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<RunWorker>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Run>d__33.MoveNext()
+
+2018-09-01T20:57:29: Start analysis
+2018-09-01T20:57:29: [ERROR] Analysis failed
+System.InvalidOperationException: Cannot obtain search paths ---> System.IO.FileNotFoundException: Could not launch process
+   at Microsoft.PythonTools.Analysis.Infrastructure.ProcessHelper..ctor(String filename, IEnumerable`1 arguments, String workingDir)
+   at Microsoft.PythonTools.Analysis.PythonLibraryPath.<GetUncachedDatabaseSearchPathsAsync>d__15.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Prepare>d__46.MoveNext()
+   --- End of inner exception stack trace ---
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Prepare>d__46.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<RunWorker>d__34.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Microsoft.PythonTools.Analysis.PyLibAnalyzer.<Run>d__33.MoveNext()

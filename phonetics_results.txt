@@ -1,0 +1,28 @@
+[SOUNDEX]
+zero stay = True
+Datasets: WIKI
+
+Precision = 5.039315846869081, Recall = 59.15113406692117
+
+
+[SOUNDEX]
+zero stay = True
+Datasets: BIRKBECK
+
+Precision = 1.476865817534812, Recall = 34.41455468096762
+
+
+[METAPHONE]
+
+Datasets: WIKI
+
+Precision = 2.9289845108585757, Recall = 65.05726476532675
+
+
+[METAPHONE]
+
+Datasets: BIRKBECK
+
+Precision = 1.0700530787485734, Recall = 42.57705504137474
+
+
