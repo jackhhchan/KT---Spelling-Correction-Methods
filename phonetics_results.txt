@@ -26,3 +26,84 @@ Datasets: BIRKBECK
 Precision = 1.0700530787485734, Recall = 42.57705504137474
 
 
+[DMETAPHONE]
+
+Datasets: WIKI
+
+Precision = 0.0003603263941325694, Recall = 92.61172243431395
+
+
+[SOUNDEX]
+Datasets: BIRKBECK
+Sample Size: 4453
+
+Number of correct suggestions: 1533, Total number of suggestions: 102561
+Precision = 1.4947202152865124, Recall = 34.42622950819672
+
+
+[METAPHONE]
+Datasets: BIRKBECK
+Sample Size: 4453
+
+Number of correct suggestions: 1858, Total number of suggestions: 173241
+Precision = 1.0724943864327727, Recall = 41.7246799910173
+
+
+[DMETAPHONE]
+Datasets: WIKI
+Sample Size: 500
+
+Number of correct suggestions: 0, Total number of suggestions: 1238689777
+Precision = 0.0, Recall = 0.0
+
+
+Using FUZZY SOUNDEX -- truncated to 4
+
+[SOUNDEX]
+Datasets: WIKI
+Sample Size: 4453
+
+Number of correct suggestions: 3725, Total number of suggestions: 1456362
+Precision = 0.25577431984630195, Recall = 83.65147091848192
+
+
+[SOUNDEX]
+Datasets: BIRKBECK (1)
+Sample Size: 4453
+
+Number of correct suggestions: 2677, Total number of suggestions: 1200973
+Precision = 0.2229025964780224, Recall = 60.11677520772513
+
+
+[SOUNDEX]
+Datasets: BIRKBECK (2)
+Sample Size: 4453
+
+Number of correct suggestions: 2735, Total number of suggestions: 1227457
+Precision = 0.22281839608230677, Recall = 61.419267909274645
+
+
+[DMETAPHONE]
+Datasets: WIKI
+Sample Size: 500
+
+Number of correct suggestions: 0, Total number of suggestions: 1210148816
+Precision = 0.0, Recall = 0.0
+
+
+[DMETAPHONE]
+Datasets: WIKI
+Sample Size: 10
+
+Number of correct suggestions: 0, Total number of suggestions: 27194784
+Precision = 0.0, Recall = 0.0
+
+
+[DMETAPHONE]
+Datasets: WIKI
+Sample Size: 10
+
+Number of correct suggestions: 0, Total number of suggestions: 30213765
+Precision = 0.0, Recall = 0.0
+
+

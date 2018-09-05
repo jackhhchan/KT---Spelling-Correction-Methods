@@ -1,6 +1,54 @@
 [LEVENSHTEIN-LIMIT]
-Limit = 1Datasets: WIKI
+Limit = 1
+Datasets: WIKI
 
+Precision = 28.922908693275012, Recall = 71.27779025376151
+
+
+[LEVENSHTEIN-LIMIT]
+Limit = 2
+Datasets: WIKI
+
+Precision = 2.7319366977811, Recall = 96.02515158320234
+
+
+[LEVENSHTEIN-DYNAMIC]
+Datasets: WIKI
+
+Precision = 26.043208049718853, Recall = 79.04783292162587
+
+
+[LEVENSHTEIN-DYNAMIC]
+Datasets: BIRKBECK
+Sample size: 2000
+
+Precision = 7.70941438102298, Recall = 41.6
+
+
+
+[LEVENSHTEIN-DYNAMIC]
+Datasets: BIRKBECK
+Sample size: 4453
+
+Precision = 7.390026932179874, Recall = 40.66921176734786
+
+
+
+[LEVENSHTEIN-LIMIT]
+Datasets: WIKI
+Sample size: 4453
+Limit: 2
+
+numCorrect: 4276, totalSuggestions: 156519
+Precision = 2.7319366977811, Recall = 96.02515158320234
+
+
+[LEVENSHTEIN-LIMIT]
+Datasets: WIKI
+Sample size: 4453
+Limit: 1
+
+numCorrect: 3174, totalSuggestions: 10974
 Precision = 28.922908693275012, Recall = 71.27779025376151
 
 

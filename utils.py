@@ -52,6 +52,7 @@ def levenshtein_minDist(misspells, dictionary):
     
     print("Generating edit distances for a misspell words with all words in dictionary...")
     ged_All = list()    # Initiate list to store edit distances for all misspelled words.
+    num = 1
     for misspell in tqdm(misspells):
         ged = list()
         for word in dictionary:
@@ -141,8 +142,9 @@ def soundex(collection, zero=False):
     Returns a soundexed encoded version of the collection.
     """
 
-    from phonetics import soundex
+    import fuzzy
 
+    soundex = fuzzy.Soundex(4)
     try:
         assert type(collection) == list
     except AssertionError:
@@ -199,7 +201,8 @@ def dMetaphone(collection):
     except AssertionError:
         print("The collection for metaphone is not a string or a list.")
 
-    from phonetics import dmetaphone
+    import fuzzy
+    dmetaphone = fuzzy.DMetaphone()
 
     if type(collection) == str:
         return dmetaphone(collection)
@@ -207,12 +210,17 @@ def dMetaphone(collection):
     collectionEncoded = list()
     for word in collection:
         wordEncoded = dmetaphone(word)
+        if wordEncoded[0] is not None:
+            wordEncoded[0] = wordEncoded[0].decode('UTF-8')
+        if wordEncoded[1] is not None:
+            wordEncoded[1] = wordEncoded[1].decode('UTF-8')
+
         collectionEncoded.append(wordEncoded)
         
 
     return collectionEncoded
 
-def phoneticsSuggestions(misEncoded, dictEncoded, dictionary):
+def phoneticsSuggestions(misEncoded, dictEncoded, dictionary, args):
     """
     Returns suggestions from dictionary where misEncoded = dictEncoded.
 
@@ -222,13 +230,29 @@ def phoneticsSuggestions(misEncoded, dictEncoded, dictionary):
     dictionary      -- original dictionary words to return in the suggestions.
     """
 
-    suggestions_all = list()
-    for misspell in tqdm(misEncoded):
-        suggestions = list()
-        for i, word in enumerate(dictEncoded):
-            if misspell == word:
-                suggestions.append(dictionary[i])
-        suggestions_all.append(suggestions)
+    # phonetics algorithm: double metaphone
+    if args.type == 'dmetaphone':
+        suggestions_all = []
+        for misEncode_1, misEncode_2 in tqdm(misEncoded):
+
+            suggestions = []
+            for i, dictEncode in enumerate(dictEncoded):
+                if misEncode_1 in dictEncode or misEncode_2 in dictEncode:
+                    suggestions.extend(dictionary[i])
+                    
+            suggestions_all.append(suggestions)
+
+        return suggestions_all
+
+    # phonetics algorithms: soundex, metaphone
+    elif args.type == 'metaphone' or args.type == 'soundex':
+        suggestions_all = []
+        for misspell in tqdm(misEncoded):
+            suggestions = []
+            for i, word in enumerate(dictEncoded):
+                if misspell == word:
+                    suggestions.append(dictionary[i])
+            suggestions_all.append(suggestions)
 
     return suggestions_all
 
@@ -247,9 +271,13 @@ def eval(suggestions, corrections):
     corrections     -- list of corrections
     """
 
+    assert len(suggestions) == len(corrections), "Incorrect number of misspelled words and their correct words."
+
+
     # Calculate precision and recall.
     numCorrect = 0
     totalPrecision = 0
+    totalSuggestions = 0
     for i, suggestion in enumerate(tqdm(suggestions)):
         if corrections[i] in suggestion:
             numCorrect += 1
@@ -260,7 +288,7 @@ def eval(suggestions, corrections):
     # Recall = number of correct suggestions (numCorrect) / total number of misspelled words.
     recall = float(numCorrect) / float(len(suggestions))
     
-    return precision*100, recall*100
+    return precision*100, recall*100, numCorrect, totalSuggestions
 
 
 ####################################################
@@ -309,28 +337,41 @@ def inputDictionary(dictionaryPath = DICTIONARY_DIR):
 
     return dictionary
 
-def inputDatasets(dataset):
+def inputDatasets(args):
     """
     Returns (misspells, corrections) in lists.
 
     Arguments:
     dataset     -- the dataset used.
     """
-    if dataset == 'birkbeck':
+    if args.dataset == 'birkbeck':
         misspellsPath = BIRKBECKMISSPELLS_DIR
         correctsPath = BIRKBECKCORRECTS_DIR
-    elif dataset == 'wiki':
+        print("Using the BIRKBECK dataset.")
+
+    elif args.dataset == 'wiki':
         misspellsPath = MISSPELLSWIKI_DIR
         correctsPath = CORRECTSWIKI_DIR
+        print("Using the WIKI dataset.")
 
 
     misspells = processTextFiles(misspellsPath)
-    print ("Number of misspelled words: {0}".format(len(misspells)))
-
     corrects = processTextFiles(correctsPath)
-    print ("Number of correct words: {0}".format(len(corrects)))
 
     assert len(misspells) == len(corrects), "Number of misspelled words != correct words!"
+
+    if args.samplesize is not None:
+        sample_size = args.samplesize
+        print("Taking a sample size of {0}...".format(sample_size))
+        import numpy as np
+        indices = np.random.choice(np.arange(len(misspells)), sample_size)
+        misspells_sample = []
+        corrects_sample = []
+        for idx in indices:
+            misspells_sample.append(misspells[idx])
+            corrects_sample.append(corrects[idx])
+        
+        return (misspells_sample, corrects_sample)
 
     return (misspells, corrects)
 
